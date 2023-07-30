@@ -2,7 +2,7 @@
 
 if [[ -f /etc/redhat-release ]]; then
   yum update -y 
-  yum install -y cargo
+  yum install -y cargo openssl-devel
 fi
 
 if [[ -f /etc/lsb-release ]]; then
@@ -11,4 +11,4 @@ if [[ -f /etc/lsb-release ]]; then
 fi
 
 
-cargo install topgrade cargo-upgrade
+cargo install topgrade cargo-update
