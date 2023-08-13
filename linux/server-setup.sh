@@ -10,7 +10,7 @@ if [[ -f /etc/lsb-release ]]; then
   apt-get update -y
   BASIC="git curl neovim ncdu exa bat fd-find tldr"
   DEV="golang python3 python3-virtualenvwrapper gcc clang"
-  CONTAINER="docker"
+  CONTAINER="docker.io containerd"
   apt install -y $BASIC $DEV $CONTAINER
 fi
 
