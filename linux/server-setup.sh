@@ -8,7 +8,10 @@ fi
 
 if [[ -f /etc/lsb-release ]]; then
   apt-get update -y
-  apt-get install -y git curl zsh neovim ncdu batcat exa docker golang python3 python3-virtualenvwrapper
+  BASIC="git curl neovim ncdu exa bat fd-find tldr"
+  DEV="golang python3 python3-virtualenvwrapper gcc clang"
+  CONTAINER="docker"
+  apt install -y $BASIC $DEV $CONTAINER
 fi
 
 if [[ ! -e ~/.antigen ]]; then
