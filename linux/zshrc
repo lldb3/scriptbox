@@ -42,7 +42,12 @@ alias dc="docker compose"
 ##### Optional aliases
 alias ls="exa"
 alias l="exa -laag"
-alias cat="bat -p"
+if [[ -f /etc/redhat-release ]]; then
+    alias cat="bat -p"
+elif [[ -f /etc/lsb-release ]]; then
+    alias cat="batcat -p"
+fi
+
 
 phan() {
     docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" phanphp/phan:latest $@
