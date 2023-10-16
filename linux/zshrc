@@ -41,8 +41,8 @@ antigen apply
 alias dc="docker compose"
 
 ##### Optional aliases
-alias ls="exa"
-alias l="exa -laag"
+alias ls="lsd"
+alias l="lsd -la"
 if [[ -f /etc/redhat-release ]]; then
     alias cat="bat -p"
 elif [[ -f /etc/lsb-release ]]; then
