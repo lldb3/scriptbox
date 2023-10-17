@@ -8,8 +8,7 @@ fi
 
 if [[ -f /etc/lsb-release ]]; then
   apt-get update -y
-  BASIC="git curl neovim ncdu bat fd-find tldr"
+  BASIC="git curl neovim ncdu bat fd-find tldr lsd"
   DEV="golang python3 python3-virtualenvwrapper gcc clang"
   apt install -y $BASIC $DEV
-  snap install lsd
 fi
