@@ -13,4 +13,4 @@ if [[ -f /etc/lsb-release ]]; then
 fi
 
 
-cargo install topgrade cargo-update
+cargo install topgrade cargo-update lsd
